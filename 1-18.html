@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#qq{
+				height: 400px;
+				width: 200px;
+				background: pink;
+			}
+			
+			#title{
+				height: 200px;
+				width: 200px;
+				background: yellowgreen;
+				position: absolute;
+				top:20px;
+				left:220px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="qq"></div>
+		<div id="title"></div>
+		<ul id="list">
+			<li class="abc">1</li>
+			<li>1</li>
+			<li>1</li>
+		</ul>
+		<script type="text/javascript">
+//			var str = 'afjs;dfsfsdfmdsfmsldfsafag';
+//			var arr = [];
+//			var pos =str.indexOf('s');
+//			while(pos > -1){
+//				arr.push(pos);
+//				pos = str.indexOf('s',pos+1);
+//			}
+//			
+//			alert(arr);
+
+//		var qq = document.getElementById('qq');
+//		var title = document.getElementById('title');
+//		
+//		qq.onmouseover = show;
+//		qq.onmouseout = hide;
+//		
+//		title.onmouseover = show;
+//		title.onmouseout = hide;
+//		
+//		var timer = null;
+//		function show(){
+//			   clearInterval(timer);		
+//				title.style.display = 'block';
+//			
+//		};
+//		
+//		function hide(){
+//			timer = setTimeout(function(){
+//				title.style.display = 'none';
+//			}, 1000)
+//		}
+
+//		function callSomeFunction(someFunction,someArfuments){
+//			return someFunction(someArfuments);
+//		}
+//		
+//		function add(num){
+//			return num + 10;
+//		}
+//		
+//		console.log(callSomeFunction(add,10));
+//		
+//		function addGreeing(str){
+//			return str;
+//		}
+//		
+//		console.log(callSomeFunction(addGreeing, "aaaa"));
+
+    function $(selector,context){
+    	selector = selector.trim();
+    	
+    	var firstChar = selector.charAt(0);
+    	if(!context){
+    		context = document;
+    	}
+    	
+    	if(selector.indexOf(' ') !== -1){
+    		return context.querySelectorAll(selector);
+    	}else if( firstChar === '#'){
+    		return document.getElementById(selector.slice(1));
+    	}else if(firstChar === '.'){
+    		return context.getElementsByClassName(selector.slice(1));
+    	}else{
+    		return context.getElementsByTagName(selector);
+    	}
+    };
+    
+    
+    console.log($("#list"));
+    console.log($(".abc"));
+    console.log($("li",$("ul")[0]));
+    console.log($("ul li"));
+    
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>123</li>
+			<li>1231</li>
+			<li>1232</li>
+			<li>1233</li>
+		</ul>
+		<input type="checkbox" />
+		<input type="checkbox" checked/>
+		<table border="" cellspacing="" cellpadding="">
+			<tr>
+				<th>Header</th>
+				<th>Header1</th>
+				<th>Header2</th>
+			</tr>
+			<tr>
+				<td>Data</td>
+				<td>Data1</td>
+				<td>Data2</td>
+			</tr>
+		</table>
+		<script src="jquery.js"></script>
+		<script type="text/javascript">
+			let el = $('li:first');
+			console.log(el[0])
+			let el1 = $('input:not(:checked)');
+			console.log(el1[0])
+			
+			let e2 = $('td:even');
+			console.log(e2[0],e2[1])
+			let ea = $('td:odd');
+			console.log(ea[0])
+			
+			let tr1 = $('tr:eq(1)');
+			console.log(tr1[0])
+		</script>
+	</body>
+</html>

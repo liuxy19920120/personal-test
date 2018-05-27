@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/react.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/react-dom.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/babel.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/babel">
+			class Hello extends React.Component{
+				constructor(props){
+					super(props)
+					this.state = {
+						text:'aaa'
+					}
+				}
+				change(){
+					console.log(this)
+				}
+				render(){
+					return <div onClick={this.change}>
+					          {this.state.text}
+					       </div>
+				}
+			}
+			
+			ReactDOM.render(
+				<Hello />,
+				box
+			)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 200px;
+				width: 200px;
+				background: url(images/lico.png) no-repeat,url(images/box_center.png) no-repeat;
+				background-size: contain,cover;
+			}
+			
+			span{
+				display: inline-block;
+				vertical-align: top;
+				font:16px/30px "微软雅黑";
+			}
+			
+			#info{
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<span style="width: 500px;">
+			<span id='info'>妙味课堂共1684集视频课程
+这里汇集了国内最全的 WEB 前端开发视频资源,所有视频都是妙味课堂根据实体班的内容精心录制而成，目前已成为行业内系统学习前端开发最权威的视频学习资料库。</span><span style="white-space: nowrap;">......</span><a href="javascript:" id="btn"> 收缩</a>
+		</span>
+		<script type="text/javascript">
+//			var arr = [];
+//			for(var i=0;i<10;i++){
+//				var fn = (function(i){
+//					return function(){
+//						alert(i)
+//					}
+//				})(i);
+//				arr.push(fn)
+//			}
+//			console.log(arr.toString());
+//			arr[1]();
+//			
+//			var a = 10;
+//			function fn(){
+//				alert(a);
+//				var a = 20;
+//				alert(a);
+//			}
+//			
+//			fn();
+
+
+//			var arr=[];
+//			for(var i=0;i<20;i++){
+//				var fun  =(function(i){
+//					return function(){
+//						alert(i);
+//					}
+//				})(i);
+//				
+//				arr.push(fun);
+//			}
+			
+//			arr.forEach(function(item){
+//				item();
+//			})
+//			
+//			var arr1 = arr.map(function(item,index,array){
+//				return item();
+//			})
+//			
+//			console.log(arr1);
+			
+//			var str="妙味课堂是一支专业的IT培训团队";
+//			
+//			alert(str.slice(2,-2));
+			
+			var str = info.innerHTML;
+			var isOpen  =true;
+			btn.onclick = function(){
+				if(isOpen){
+					info.innerHTML = str.substring(0,18);
+					btn.innerHTML = ' 展开'
+				}else{
+					info.innerHTML = str;
+					btn.innerHTML = ' 收缩'
+				}
+				isOpen = !isOpen;
+			}
+		</script>
+	</body>
+</html>

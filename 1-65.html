@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function foo(){
+//				var a=2;
+//				function baz(){
+//					console.log(a)
+//				}
+//				bar(baz)
+//			}
+//			
+//			function bar(fn){
+//				fn()
+//			}
+//			
+//		foo()
+//      for(var i=2;i<=5;i++){
+//      	(function(){
+//      		setTimeout(function(){
+//      		console.log(i)
+//      	   },i*1000)
+//      	})(i)
+//      }
+//      for(let i=1;i<6;i++){
+//      	setTimeout(function(){
+//      	  console.log(i)
+//      	},i*1000)
+//      }
+
+//      function foo(){
+//      	var something = 'cool';
+//      	var another = [1,2,3];
+//      	function dosomething(){
+//      		console.log(something)
+//      	}
+//      	
+//      	function doanother(){
+//      		console.log(another)
+//      	}
+//      	
+//      	return {
+//      		dosomething:dosomething,
+//      		doanother:doanother
+//      	}
+//      }
+//      
+//      var f = foo();
+//      f.dosomething();
+//      f.doanother()
+
+
+//      var foo = (function(){
+//      	
+//      })()
+//      var foo = (function(id){
+//        function change(){
+//        	publicApi.identify = identify2
+//        }
+//        
+//        function identify1(){
+//        	console.log(id)
+//        }
+//        function identify2(){
+//        	console.log(id.toUpperCase())
+//        }
+//        
+//        var publicApi = {
+//        	change:change,
+//        	identify:identify1
+//        }
+//        
+//        return publicApi
+//      })('foo')
+//      foo.identify();
+//      foo.change();
+//      foo.identify()
+
+        var myModules = (function(){
+        	var modules = [];
+        	function define(name,deps,impl){
+        		for(var i=0;i<deps.length;i++){
+        			deps[i] = modules[deps[i]]
+        		}
+        		modules[name] = impl.apply(impl,deps)
+        	}
+        	
+        	function get(name){
+        		return modules[name]
+        	}
+        	
+        	return {
+        		define:define,
+        		get:get
+        	}
+        })()
+        
+        myModules.define('bar',[],function(){
+        	function hello(who){
+        		return 'let me introduces ' + who;
+        	}
+        	
+        	return {
+        		hello:hello
+        	}
+        })
+        
+        myModules.define('foo',['bar'],function(bar){
+        	var hungry = 'hippo';
+        	function awesome(){
+        		console.log(bar.hello(hungry).toUpperCase())
+        	}
+        	
+        	return {
+        		awesome:awesome
+        	}
+        })
+        
+        var bar = myModules.get('bar')
+        var foo = myModules.get('foo')
+        console.log(bar.hello('hippo'))
+        foo.awesome()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class Test {
+			constructor(){
+			    this.values = 'tm7';
+			//this.view = this.view.bind(this);
+			    }
+			    view(){
+			    	console.log(this)
+			        this.print();
+			    }
+			    print(){
+			        console.log(this.values);
+			    }
+			}
+			
+			let a = new Test();
+			a.view();
+			let b = a.view;
+			b();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="info" id="info" value="" />
+		<input type="button" name="pa" id="pa" value="加密" />
+		<div id="co"></div>
+		<script type="text/javascript">
+			var str = '妙味课堂';
+//			
+//			console.log(String.fromCharCode(21619));
+//			console.log(str.charCodeAt(1));
+			
+//			for(var i=10000;i<20000;i++){
+//				document.body.innerHTML += String.fromCharCode(i);
+//			}
+//			var info =document.getElementById('info');
+//			pa.onclick  =function(){
+//				var str = info.value;
+//				for(var i=0;i<str.length;i++){
+//					co.innerHTML += String.fromCharCode(str.charCodeAt(i)-1000)+":";
+//					
+//				}
+//			}
+
+			var str = 'wwmiaoww1111ww';
+			for(var i=str.length;str.lastIndexOf('ww',i)!= -1&&i>=0;){
+				console.log(str.lastIndexOf('ww',i),i);
+				i=str.lastIndexOf('ww',i)-2;
+			}
+			
+		</script>
+	</body>
+</html>

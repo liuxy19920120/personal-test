@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="添加" />
+		
+		<input type="text" name="message" id="message" value="" />
+		<ul id="list">
+		</ul>
+		<input type="button" name="clone" id="clone" value="复制" />
+		<input type="button" name="loop" id="loop" value="loop" />
+		<div id="c"></div>
+		<script type="text/javascript">
+			btn.onclick  =function(){
+				var li = document.createElement('li');
+				var del = document.createElement('input');
+				del.type = 'button';
+				del.value = '删除';
+				del.onclick  =function(){
+					this.parentNode.remove();
+				}
+			
+				li.innerHTML =  message.value;
+				li.appendChild(del);
+				list.appendChild(li);
+			}
+			
+			clone.onclick = function(){
+				c.appendChild(list.cloneNode(true));
+			}
+			
+			loop.onclick  = function(){
+				list.appendChild(list.firstElementChild);
+			}
+			
+		
+		</script>
+	</body>
+</html>

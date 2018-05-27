@@ -1,0 +1,149 @@
+@charset "gb2312";
+/* 共用css */
+* { margin: 0; padding: 0 }
+body { font: 14px "微软雅黑", Arial, Helvetica, sans-serif; color: #666666; background: url(../images/topbg.jpg) repeat-x; }
+img { border: 0; display: block }
+ul { list-style: none; }
+a { color: #444; text-decoration: none; }
+a:hover { color: #f00; }
+.clearfloat { height: 0px; width: 100%; clear: both; overflow: hidden }
+.blank { height: 5px; overflow: hidden; width: 100%; margin: auto; clear: both }
+.f_l { float: left; }
+.f_r { float: right; }
+/*body*/
+header { width: 100%; }
+.navtop { width: 1200px; margin: auto; position: relative; }
+.logo { background: url(../images/logobg.png) no-repeat; width: 268px; height: 149px; position: absolute; /*animation: myfirst 5s; -moz-animation: myfirst 5s; *//* Firefox */ /*-webkit-animation: myfirst 5s; /* Safari and Chrome */ -o-animation: myfirst 5s; /* Opera */ }
+ @keyframes myfirst { 0% {
+width:0%;
+}
+100% {
+width:268px;
+}
+}
+ @-moz-keyframes myfirst /* Firefox */ { 0% {
+width:0%;
+}
+100% {
+width:268px;
+}
+}
+ @-webkit-keyframes myfirst /* Safari and Chrome */ { 0% {
+width:0%;
+}
+100% {
+width:268px;
+}
+}
+ @-o-keyframes myfirst /* Opera */ { 0% {
+width:0%;
+}
+100% {
+width:268px;
+}
+}
+/*nav*/
+nav { float: right; width: 100%; margin-bottom: 8px }
+.navigation { height: 40px; margin-top: 25px; }
+.menu { position: relative; padding-top: 10px; float: right }
+.menu li { float: left; width: 110px; text-align: center; position: relative; line-height: 40px; }
+.menu li:hover { background: url(../images/navli.png) no-repeat bottom center }
+.menu li a { display: block; text-decoration: none; color: #000; font-size: 15px; font-weight: bold }
+.menu ul { position: relative; z-index: 300; }
+.menu li ul { display: none; width: 110px; position: absolute; TOP: 40px; left: 0; }
+.menu li ul li { font-size: 12px; height: 28px; line-height: 28px; background: rgba(0, 0, 0,0.9); }
+.menu li ul li a { font-size: 14px; color: #Fff; }
+.menu li ul li:hover a { color: #Fff; background: rgba(204, 12, 12, 0.9); }
+.logo img { margin: 30px auto 0 }
+.tell img { margin-top: 20px }
+.tell img { -webkit-animation: animations2 5s ease-in-out 1s backwards; -moz-animation: animations2 5s ease-in-out 1s backwards; -o-animation: animations2 5s ease-in-out 1s backwards; -ms-animation: animations2 5s ease-in-out 1s backwards; animation: animations2 5s ease-in-out 1s backwards; }
+@-webkit-keyframes animations2 { 0% {
+opacity:0;
+}
+ 40% {
+opacity:.8;
+}
+ 45% {
+opacity:.3;
+}
+ 50% {
+opacity:.8;
+}
+ 55% {
+opacity:.3;
+}
+ 60% {
+opacity:.8;
+}
+ 100% {
+opacity:1;
+}
+}
+@-moz-keyframes animations2 { 0% {
+opacity:0;
+}
+ 40% {
+opacity:.8;
+}
+ 45% {
+opacity:.3;
+}
+ 50% {
+opacity:.8;
+}
+ 55% {
+opacity:.3;
+}
+ 60% {
+opacity:.8;
+}
+ 100% {
+opacity:1;
+}
+}
+@-o-keyframes animations2 { 0% {
+opacity:0;
+}
+ 40% {
+opacity:.8;
+}
+ 45% {
+opacity:.3;
+}
+ 50% {
+opacity:.8;
+}
+ 55% {
+opacity:.3;
+}
+ 60% {
+opacity:.8;
+}
+ 100% {
+opacity:1;
+}
+}
+@keyframes animations2 { 0% {
+opacity:0;
+}
+ 40% {
+opacity:.8;
+}
+ 45% {
+opacity:.3;
+}
+ 50% {
+opacity:.8;
+}
+ 55% {
+opacity:.3;
+}
+ 60% {
+opacity:.8;
+}
+ 100% {
+opacity:1;
+}
+}
+footer { background: #3e3e3e; width: 100%; text-align: center; line-height: 26px; padding: 20px 0; color: #FFF }
+footer a { color: #FFF }

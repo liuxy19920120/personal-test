@@ -1,0 +1,58 @@
+@charset "gb2312";
+/*公共部分*/
+
+#playBox { width: 100%; height: 409px; margin: 20px auto; background: #333; position: relative; overflow: hidden; }
+#playBox .oUlplay { width: 99999px; position: absolute; left: 0; top: 0; }
+#playBox .oUlplay li { float: left; }
+#playBox .pre { cursor: pointer; width: 45px; height: 45px; background: url(../images/l.png) no-repeat; position: absolute; top: 190px; left: 10px; z-index: 10; }
+#playBox .next { cursor: pointer; width: 45px; height: 45px; background: url(../images/r.png) no-repeat; position: absolute; top: 190px; right: 10px; z-index: 10; }
+#playBox .smalltitle { width: 100%; height: 10px; position: absolute; bottom: 15px; z-index: 10 }
+#playBox .smalltitle ul { width: 120px; margin: 0 auto; }
+#playBox .smalltitle ul li { width: 10px; height: 10px; margin: 0 5px; border-radius: 10px; background: #ffffff; float: left; overflow: hidden; *display:inline;
+*zoom:1;
+}
+#playBox .smalltitle .thistitle { background: #69aaec; }
+.mainc { width: 100%; }
+.product { background: #f0f0f0; width: 100%; padding: 30px 0; font-size: 16px }
+.product h2 { margin: auto; width: 228px; }
+.product h2 img { width: 228px; height: 83px; }
+.productlist { width: 1200px; margin: 20px auto; text-align: center; overflow: hidden }
+.productlist li { width: 30%; margin: 20px; background: #FFF; padding-bottom: 20px; float: left; box-shadow: #ccc 5px 5px 10px; overflow: hidden }
+.productlist li img { margin: auto; transition: all 1s ease 0s; -webkit-transition: all 1s ease 0s; -moz-transition: all 1s ease 0s; -o-transition: all 1s ease 0s; }
+.productlist li:hover img { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); -o-transform: scale(0.9); transform: scale(0.9); }
+.show { width: 1200px; padding: 30px 0; margin: auto; overflow: hidden }
+.show h2 { margin: 30px auto; width: 373px; }
+.show h2 img { width: 373px; height: 78px; }
+.proIndex { height: 537px; position: relative; margin-top: 17px; }
+.proIndex a { display: block; overflow: hidden; position: absolute; }
+.proIndex .item1, .proIndex .item1 img { width: 502px; height: 537px; }
+.proIndex .item2, .proIndex .item2 img { width: 679px; height: 305px; }
+.proIndex .item3, .proIndex .item3 img, .proIndex .item4, .proIndex .item4 img { width: 330px; height: 215px; }
+.proIndex .item1, .proIndex .item2 { top: 0; }
+.proIndex .item1 { left: 0; }
+.proIndex .item2, .proIndex .item4 { right: 0; }
+.proIndex .item3, .proIndex .item4 { bottom: 0; }
+.proIndex .item3 { left: 519px; }
+.proIndex a div { position: absolute; left: 17px; top: 23px; z-index: 9; }
+.proIndex a.item1 div { left: 27px; }
+.proIndex a h2, .proIndex a h3 { font-weight: normal; margin: 0; padding: 0; }
+.proIndex a h3 { font-size: 14px; color: #dad0be; text-transform: uppercase; }
+.proIndex a h2 { font-size: 48px; margin-top: -9px; }
+.proIndex a span { display: inline-block; color: #bfa169; border: 2px solid #bfa169; padding: 2px 20px 4px 20px; margin-top: 10px; transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -webkit-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; }
+.proIndex a span:hover { color: #fff; border-color: #bfa169; background: #bfa169; }
+.proIndex .item3 h2, .proIndex .item4 h2 { font-size: 30px; margin-top: 0; }
+.proIndex a img { -webkit-transition: all 1.2s; -moz-transition: all 1.2s; -o-transition: all 1.2s; -ms-transition: all 1.2s; transition: all 1.2s; }
+.proIndex a:hover img { -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
+.contact { background: #f0f0f0; width: 100%; padding: 30px 0; font-size: 16px; overflow: hidden; }
+.contact h2 { width: 270px; height: 75px; margin: auto }
+.conbox { width: 1200px; margin: 20px auto; overflow: hidden; }
+.clbox { width: 320px; text-align: center }
+.clbox li { height: 135px; background: #FFF; line-height: 135px; transition: all 1s ease 0s; -webkit-transition: all 1s ease 0s; -moz-transition: all 1s ease 0s; -o-transition: all 1s ease 0s; }
+.clbox li:nth-child(1) { background: url(../images/c1.jpg) no-repeat center left 30px #fff }
+.clbox li:nth-child(2) { background: url(../images/c2.jpg) no-repeat center left 30px #f6f6f6 }
+.clbox li:nth-child(3) { background: url(../images/c3.jpg) no-repeat center left 30px #fff }
+.clbox li:hover { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); -o-transform: scale(0.9); transform: scale(0.9); }
+.ditu { height: 405px; width: 505px; }
+.about { width: 375px; height: 405px; background: #900; color: #FFF }
+.about ul { margin: 60px }
+.about ul h2 { font-size: 30px }

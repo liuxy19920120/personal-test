@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta http-equiv="refresh" content="5;url=http://www.baidu.com">-->
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 300px;
+				background: red;
+			}
+			
+				
+			#box1{
+				width: 400px;
+				height: 100px;
+				background: green;
+			}
+			
+			#box1 span{
+				width: 100px;
+				height: 40px;
+				float: left;
+				margin-right: 10px;
+				margin-bottom: 20px;
+				background: yellow;
+			}
+		</style>	
+	</head>
+	<body>
+		<div id="box" data-scroll-reveal="enter left and move 50px over 1.33s">
+			我的
+		</div>
+		<div id="box1">
+			<span data-scroll-reveal="enter left and move 50px over 1s 1s">1</span>
+			<span data-scroll-reveal="enter from the bottom after 1s">2</span>
+			<span data-scroll-reveal="enter from the bottom after 1s">3</span>
+			<span data-scroll-reveal="enter from the bottom after 1s">4</span>
+			<span data-scroll-reveal="wait 2.5s and then ease-in-out 100px">5</span>
+		</div>
+		<script src="js/scrollReveal.js"></script>
+		<script type="text/javascript">
+
+      (function($) {
+        'use strict';
+          window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+      })();
+
+    </script>
+	</body>
+</html>

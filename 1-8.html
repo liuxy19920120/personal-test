@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var arrButtons  =document.querySelectorAll('button');
+				
+				for(var i=0;i<arrButtons.length;i++){
+					arrButtons[i].onFocus = false;
+					arrButtons[i].onclick  =function(){
+						if(this.onFocus){
+							this.onFocus =false;
+							this.style.background ='';
+						}else{
+							this.onFocus =true;
+							this.style.background ='red';
+						}
+					};
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<button>确定</button>
+		<button>确定</button>
+		<button>确定</button>
+		<button>确定</button>
+	</body>
+</html>

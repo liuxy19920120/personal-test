@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		p{
+			margin: 0;
+			padding: 0;
+			transition: 1s;
+		}
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				width: 200px;
+				margin: 100px auto;
+				border: 1px solid #ccc;
+			}
+			
+			ul li{
+				height: 50px;
+				line-height: 50px;
+				font: 20px;
+			}
+			
+			.active{
+				background: green;
+			}
+			
+			.active>p{
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="list">
+			<li><p>第一行</p></li>
+			<li><p>狄伟航</p></li>
+			<li>第三行</li>
+			<li>第四行</li>
+			<li>第五航</li>
+		</ul>
+		<script type="text/javascript">
+			list.onmouseover = function(ev){
+				let target = ev.target;
+				if(target.nodeName === 'P'){
+					target.parentNode.classList.add('active')
+				}
+			}
+			
+			list.onmouseout = function(ev){
+				let target = ev.target;
+				if(target.nodeName === 'P'){
+					target.parentNode.classList.remove('active')
+				}
+			}
+		</script>
+	</body>
+</html>

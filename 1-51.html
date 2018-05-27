@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 300px;
+				background: red;
+				display: none;
+			}
+			
+			div:target{
+				display: block;
+			}
+			
+			input:disabled{
+				color: red;
+			}
+			
+			input:enabled{
+				color: #0000F0;
+			}
+			
+			input[type="radio"]{
+				margin: 0 5px;
+				position: absolute;
+				left: -50px;
+				top:-50px;
+			}
+			input~span{
+				float: left;
+				height: 50px;
+				width: 50px;
+				border: 1px solid red ;
+				
+			}
+			
+			input:checked~span{
+				background: gold;
+			}
+			p{
+				width: 300px;
+				font:14px/30px "微软雅黑";
+				padding: 10px;
+				border: 1px solid red;
+			}
+			p:first-letter{
+				background: red;
+				font-size: 30px;
+			}
+			
+			p:first-line{
+				background: yellow;
+			}
+			
+			p::selection{
+				background: yellow;
+				color: #0000F0;
+			}
+			p::before{
+				content: "miaov";
+				display: block;
+			}
+			
+			p:not(.h){
+				background: gray;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--<a href="#div1">div1</a>
+		<a href="#div2">div2</a>
+		<a href="#div3">div3</a>
+		<div id="div1">div1</div>
+		<div id="div2">div2</div>
+		<div id="div3">div3</div>
+		
+		
+		<input type="text" name="" id="" value="请输入" />-->
+		<!--<label>
+			<input type="radio" name="tab" id="" value="" />
+			<span></span>
+		</label>
+		<label>
+			<input type="radio" name="tab" id="" value="" />
+			<span></span>
+		</label>
+		<label>
+			<input type="radio" name="tab" id="" value="" />
+			<span></span>
+		</label>-->
+		
+		<p>
+			近日因为四川九寨沟的事情，娱乐圈都纷纷开始捐款筹资，比如当红明星如黄晓明，吴京，孙俪邓超，刘亦菲杨洋等人动辄就是50，100万的，也算是起了一个很好的带头作用。
+			近日因为四川九寨沟的事情，娱乐圈都纷纷开始捐款筹资，比如当红明星如黄晓明，吴京，孙俪邓超，刘亦菲杨洋等人动辄就是50，100万的，也算是起了一个很好的带头作用。
+			近日因为四川九寨沟的事情，娱乐圈都纷纷开始捐款筹资，比如当红明星如黄晓明，吴京，孙俪邓超，刘亦菲杨洋等人动辄就是50，100万的，也算是起了一个很好的带头作用。
+		</p>
+		
+		<p>1</p>
+		<p class="h">2</p>
+		<p>3</p>
+		
+		<script type="text/javascript">
+			console.log(Number(true))
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function(){
+				var plus = document.getElementById('plus');
+				var jian = document.getElementById('jian');
+				var content = document.getElementById('content');
+				
+				var num= 15;
+				plus.onclick =function(){
+					num++;
+					content.style.fontSize = num +'px';
+				}
+				
+				jian.onclick =function(){
+					num--;
+					content.style.fontSize = num +'px';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="plus" value="+" />
+		<input type="button" name="" id="jian" value="-" />
+		<p id="content">
+			哈哈哈哈或或或哈哈哈哈或哈哈哈哈或或或或或或或或或或或或或或或或或hhhhhhhhhhhhh或或或或或
+		</p>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			async function fn(){
+////				return 'hello world'
+//				throw new Error('出错了')
+//			}
+//			fn().then(v => {
+//				console.log(v)
+//			},e => {
+//				console.log(e)
+//			})
+//			async function getTitle(url){
+//				let response = await fetch(url);
+//				console.log(response)
+//				let html = await response.text();
+//				console.log(html)
+//				return html.match(/<title>([\s\S]+)<\/title>/i)[1]
+//			}
+//			
+//			getTitle('https://tc39.github.io/ecma262/').then(console.log)
+
+			async function fn(){
+				await Promise.reject('出错')
+			}
+			
+			fn().then(v => {
+				console.log(v)
+			},e => {
+				console.log(e)
+			})
+		</script>
+	</body>
+</html>

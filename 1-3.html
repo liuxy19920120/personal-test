@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 50px;
+				width: 50px;
+				background:red;
+				font-size: 30px;
+				color: #fff;
+				text-align: center;
+				line-height: 50px;
+				position: absolute;
+				left: 0;
+				top:0;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				
+				var oDiv = document.getElementsByTagName('div');
+				
+				var n,m=0;
+				var height=0;
+				for(var i=0;i<100;i++){
+				document.body.innerHTML += '<div>'+ i +'</div>';
+				oDiv[i].style.left = 10+m*60 + 'px';
+				oDiv[i].style.top =10+height + 'px';
+				m++;
+				n = (i+1)%10;
+				//oDiv[i].style.top = i*50 +'px';
+				if(n == 0){
+					height +=60;
+					m=0;
+				}
+				
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

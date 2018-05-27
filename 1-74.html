@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 800px;
+				width: 800px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--<svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+				<!--<polyline stroke="red" stroke-width="5" points="50 50 200 50 300 300 50 50" fill="none"></polyline>-->
+				
+				<!--<polygon stroke="red" stroke-width="5" points="50 50 200 50 300 300 " fill="none"></polygon>-->
+			<!--</svg>-->
+		</div>
+		<script type="text/javascript">
+		    let svgNS= 'http://www.w3.org/2000/svg';
+			function createTag(tagName,objAttr){
+				let tag = document.createElementNS(svgNS,tagName)
+				for( var attr in objAttr){
+					tag.setAttribute(attr,objAttr[attr])
+				}
+				
+				return tag
+			}
+			
+			let svg = createTag('svg',{
+				xmlns:"http://www.w3.org/2000/svg",
+				height:"100%",
+				width:"100%"
+			})
+			
+			box.appendChild(svg)
+			var polyline = null;
+			var points = '';
+			svg.onmousedown  = function(ev){
+				ev = ev || window.ev
+				let x = ev.clientX - box.offsetLeft;
+				let y = ev.clientY - box.offsetTop;
+				if(!polyline){
+					polyline = createTag('polyline',{
+					stroke:"red",
+					'stroke-width':"2",
+					fill:"none"
+				   })
+				}
+				
+				if(!points){
+					points = x +','+y
+				}else{
+					points += ',' + x +','+y
+				}
+				polyline.setAttribute('points',points);
+				
+				svg.appendChild(polyline)
+				
+				let circle = createTag('circle',{
+					cx:x,
+					cy:y,
+					r:5,
+					fill:"red",
+					stroke:'red',
+					'stroke-width':3
+				})
+				
+				svg.appendChild(circle)
+			}
+			
+			svg.onmousemove  = function(ev){
+				ev = ev || window.ev
+			
+				if(polyline){
+						var x = ev.clientX - box.offsetLeft;
+				        var y = ev.clientY - box.offsetTop;
+					polyline.setAttribute('points',points + ','+x +','+y);
+				}
+			}
+			
+			svg.oncontextmenu = function(){
+				svg.onmousemove = null;
+				return false;
+			}
+		</script>
+	</body>
+</html>

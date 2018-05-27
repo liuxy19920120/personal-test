@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#btn{
+				width: 100px;
+				height: 100px;
+				background: gray;
+				font:20px/100px "微软雅黑"
+			}
+			.test{
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+	    <input type="button" name="btn" id="btn" value="按钮" />
+		<div id="box">
+			11111
+		</div>
+		<img src=""/>
+		<img src=""/>
+		<button>Change colors</button>
+		<span></span> 
+		<div>1</div> 
+		<div>2</div>
+		
+		<div>3</div> 
+		<div>4</div>
+		<div id="stop">Stop here</div> 
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/jquery-1.11.1.min.js"></script>-->
+		<script type="text/javascript">
+//		    $.holdReady(true)
+//		    $.getScript('',function(){
+//		    	$.holdReady(false)
+//		    })
+			$(function(){
+				$(document.body).css("background",'red')
+	//			$('#btn').click(function(){
+	//				$('div').hide()
+	//			})
+				$('#btn').toggle(function(){
+					$('div').hide()
+				},function(){
+					$('div').show()
+				})
+				$('<div><p>hello</p></div>').appendTo('body')
+				$('<input type="checkbox">').appendTo('body')
+				$('<div>',{
+					'class':'test',
+					text:'click me',
+					click:function(){
+						$(this).toggleClass('test')
+					}
+				}).appendTo('body')
+				$('img').each(function(i){
+					this.src = '../images/' +i+ '.jpg'
+				})
+				$('button').click(function(){
+					$('div').each(function(index,ele){
+						$(ele).css('backgroundColor','yellow')
+						if($(this).is('#stop')){
+							$('span').text('stopped at div index #'+ index)
+							return false;
+						}
+					})
+				})
+				console.log($('img').size())
+				console.log($('img').get(0))
+				console.log($('img').get().reverse())
+			})
+		</script>
+	</body>
+</html>

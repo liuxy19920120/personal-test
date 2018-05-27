@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<input type="button" name="" id="" value="换背景吧" />
+		<input type="button" name="" id="" value="停" />
+		<script type="text/javascript">
+//		alert(a)   //   
+//		var a= 1;
+//		alert(a)
+//		function a(){
+//			alert(1);
+//		};
+//		alert(a);
+//		var a= 3;
+//		alert(a);
+//		function a(){
+//			alert(4)
+//		};
+//		alert(a);
+
+
+//      var a= 1;
+//      function func(a){
+//      	alert(a);
+//      	a=2;
+//      };
+//      func();
+//      alert(a);
+
+//fn1(10)(20);
+//function fn1(a){
+//	return function fun2(b){alert(a+b);};
+//}
+//var divs = document.getElementById('div1');
+// //alert(getComputedStyle(divs).width);
+// if(divs.currentStyle){
+// 
+// 		alert(divs.currentStyle.marginRight);
+// }else{
+// 		alert(getComputedStyle(divs).marginRight);
+// }
+// 
+
+
+   var i=0;
+   var timer = null;
+   var arr = ['red','yellow','black','green'];
+   var btns = document.getElementsByTagName('input');
+   var div = document.getElementsByTagName('div')[0];
+   
+   btns[0].onclick = function(){
+   	   			clearInterval(timer);
+   		timer = setInterval(function(){
+   			div.style.background = arr[i%arr.length];
+   			i++;
+   		},1000 );
+   };
+   
+    btns[1].onclick = function(){
+   		clearInterval(timer);
+   };
+   
+   timer = setInterval(fun1,100 );
+   
+  
+	</script>
+	</body>
+</html>

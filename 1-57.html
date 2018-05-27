@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+			#content{
+				margin: 150px auto;
+				height: 200px;
+				width: 200px;
+				border: 2px solid black;
+				border-radius: 50%;
+				position: relative;
+			}
+			
+			#content span{
+				width: 2px;
+				background: black;
+				position: absolute;
+				left: 100px;
+				top:0;
+				transform-origin: 0 100px;
+			}
+			
+			#content span i{
+				position: absolute;
+				left:100px;
+				top:0px;
+				transform-origin: 0 100px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			
+		</div>
+		<script type="text/javascript">
+			var html="";
+			for(var i=0;i<60;i++){
+				html+=`<span style="transform:rotate(${6*i}deg);height:${i%5==0?20:10}px">						
+				</span>${i%5==0?'<i>1</i>':''}`;
+			}
+			
+			var content = document.getElementById('content');
+			content.innerHTML = html
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="search" id="search" value="" />
+		<ul id="list">
+		</ul>
+		<script type="text/javascript">
+		    function fn(data){
+		    	list.innerHTML = data.s.map((item) => {
+		    		return `<li>${item}</li>`
+		    	}).join('')
+		    }
+			search.oninput = function(){
+				let s = document.createElement('script');
+				s.src=`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${this.value}&cb=fn`
+				document.body.appendChild(s)
+			}
+		</script>
+	</body>
+</html>

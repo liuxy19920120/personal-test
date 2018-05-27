@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				border: 1px solid red;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+		window.onload = function(){
+			var arrButtons = document.querySelectorAll('input');
+			var arrDivs = document.querySelectorAll('div');
+			var prev = 0;
+			for(var i=0;i<arrButtons.length;i++){
+				arrButtons[i].index = i;
+				arrButtons[i].onclick = function(){
+					arrDivs[prev].style.display = 'none';
+					arrDivs[this.index].style.display = 'block';
+					prev  = this.index;
+				};
+			}
+		};
+		
+		</script>
+	</head>
+	<body>
+		<input type="button" value="1"/>
+		<input type="button" value="2"/>
+		<input type="button" value="3"/>
+		<div style="display: block;">1</div>
+		<div>2</div>
+		<div>3</div>
+	</body>
+</html>

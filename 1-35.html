@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="animation" width="500px" height="500px"></canvas>
+		<script type="text/javascript">
+			var animation = document.getElementById('animation');
+			if(animation.getContext){
+				var context = animation.getContext('2d');
+				context.fillStyle = "red";
+				context.strokeStyle = '1px solid blue';
+				context.lineWidth = '2';
+				context.lineCap = 'round';
+				context.lineJoin = 'miter';
+				
+				context.fillRect(10,10,50,50);
+				context.strokeRect(10,10,50,50);
+				
+				context.fillStyle = 'green';
+				context.strokeStyle = '1px solid yellow';
+				context.fillRect(30,30,50,50);
+				context.strokeRect(30,30,50,50);
+				context.clearRect(30,30,30,30);
+				
+				context.beginPath();
+				context.arc(100,100,99,0,2*Math.PI,false);
+			}
+			
+			var book = [
+				{
+				title:"title1",
+				authors:[
+					"aaaa",
+					"bbbb"
+				],
+				edition:3,
+				year:2012,
+				toJSON:function(){
+					return  this.title + this.authors.join("-")+ this.edition+ this.year;
+				}
+			},
+			{
+				title:"title2",
+				authors:[
+					"vvv",
+					"1"
+				],
+				edition:4,
+				year:2012,
+				releaseDate: new Date(2011,11,11)
+			}
+			]
+			
+			var jsonText = JSON.stringify(book);
+			console.log(jsonText);
+			var newBook = JSON.parse(jsonText);
+			//console.log(newBook);
+			var aa  = JSON.parse(jsonText,function(key,value){
+				if(key === "releaseDate"){
+					return new Date(value);
+				}else{
+					return value;
+				}
+			});
+			
+			console.log(aa[1].releaseDate.getFullYear());
+//			console.log(JSON.stringify(book,["title","edition"]));
+//			
+//			console.log(JSON.stringify(book,function(key,value){
+//				switch(key){
+//					case "authors":
+//						return value.join(",");
+//					case "year":
+//						return 5000;
+//					case "edition":
+//						return undefined;
+//					default:
+//						return value;
+//				}
+//			},"--"))
+//			
+//			console.log(new Date().toJSON());
+		</script>
+	</body>
+</html>

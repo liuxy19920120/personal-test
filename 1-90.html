@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="images/1.jpg" alt="图片" title="我的"/>
+		<script type="text/javascript">
+			let obj = {a:null,b:undefined,f:1,c:true,e:{
+				'e1':10
+			}}
+			let obj2 = JSONClone(obj)
+			console.log(obj2)
+			function JSONClone(obj){
+				return JSON.parse(JSON.stringify(obj))
+			}
+		</script>
+	</body>
+</html>

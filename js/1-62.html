@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<!--<div v-if="Math.random() > 0.5">
+				now you see me
+			</div>
+			<template v-else>
+				<p>1111</p>
+				<p>有</p>
+			</template>-->
+			<div v-if="Math.random() > 0.5">
+				111
+			</div>
+			<div v-else-if="Math.random() < 0.1">
+				222
+			</div>
+			<div v-else>
+				3333
+			</div>
+		</div>
+		<script src="vue.js"></script>
+		<script type="text/javascript">
+			new Vue({
+				el:'#box',
+			})
+		</script>
+	</body>
+</html>

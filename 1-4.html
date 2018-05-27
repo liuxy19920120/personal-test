@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 50px;
+				width: 50px;
+				background: red;
+				text-align: center;
+				font-size: 30px;
+				line-height: 50px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: #fff;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				
+				var m=0;
+				var oDiv = document.getElementsByTagName('div');
+				for(var i=0;i<11;i++){
+					document.body.innerHTML += '<div>'+i+'</div>'
+					oDiv[i].style.left = i*60 +'px';
+					oDiv[i].style.top =m*60 +'px';
+					if(i>4){
+						m--;
+					}else{
+						m++;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 500px;
+				width: 500px;
+				border: 1px solid red;
+				margin-top: 10px;
+				text-transform:initial;
+			}
+			
+			#div1{
+				height: 100px;
+				width: 100px;
+				background: red;
+				float: left;
+			}
+			
+			ul{
+				width: 250px;
+				border: 1px solid black;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				height: 100px;
+				margin: 20px auto;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			ul li{
+				float: left;
+				height: 100px;
+				background: red;
+				box-sizing: border-box;
+				border-right: 1px solid aquamarine;				
+				transition:1s width;
+				flex: auto;
+				//width: 50px;
+			}
+			
+			li:nth-child(2){
+				background: gray;
+			}
+			
+			li:nth-child(3){
+				background: green;
+			}
+			
+			li:nth-child(4){
+				background: gold;
+			}
+			
+			li:nth-child(5){
+				background: blanchedalmond;
+				border: 0;
+			}
+			
+			li:hover{
+				width: 150px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		
+		<div id="box">this is a penb</div>
+	</body>
+	<script type="text/javascript">
+		console.log(document.body.childNodes)
+	</script>
+</html>

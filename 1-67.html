@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//帧
+function Media()
+{
+	this.time = 0;  //持续时间
+	this.img  = -1; //图片资源
+	this.show = function(zIndex,x,y)
+	{
+		if(this.img != -1)
+		{
+			gameDrawer.join(zIndex,this.img,x,y);
+			//drawer.drawImage(picRes[this.img],x,y);
+		}
+	};
+}
+
+//动画
+function Ani()
+{
+	this.frame = [];
+	this.time = function() //动画时间
+	{
+		var output = 0;
+		for(var i=0;i<this.frame.length;i++)
+			output = output + this.frame[i].time
+		return output;
+	}
+	this.show = function(zIndex,x,y) //动画播放。
+	{
+		var thistime = this.time();
+		var localTime = gameTimeCount%thistime;
+		for(var i=0;i<this.frame.length;i++)
+		{
+			localTime = localTime - this.frame[i].time;
+			if(localTime <= 0)
+			{
+				//显示this.frame[i].img
+				this.frame[i].show(zIndex,x,y);
+				return;
+			}
+		}
+	};
+}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				border: 1px solid red;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var buttons = document.querySelectorAll('button');
+				var divs = document.querySelectorAll('div');
+				
+				var preindex = 0;
+//				for(var i=0;i<buttons.length;i++){
+//					buttons[i].index = i;
+//					buttons[i].onclick = function(){
+//						for(var j=0;j<buttons.length;j++){
+//							divs[j].style.display ='none';
+//						}
+//						divs[this.index].style.display = 'block';
+//					}
+//				}
+
+				for(var i=0;i<buttons.length;i++){
+					buttons[i].index = i;
+					buttons[i].onclick = function(){
+						divs[preindex].style.display = 'none';
+						preindex  = this.index;
+						divs[this.index].style.display = 'block';
+					}
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<button>确定1</button>
+		<button>确定2</button>
+		<button>确定3</button>
+		<div style="display: block;">1</div>
+		<div>2</div>
+		<div>3</div>
+	</body>
+</html>

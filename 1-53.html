@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="测试" />
+		<input type="button" name="change" id="change" value="改变状态" />
+		<ul id="list">
+			<li>123</li>
+		</ul>
+		<script type="text/javascript">
+			btn.addEventListener('click',function(){
+				var state  = true;				
+				change.onclick = function(){
+					console.log("我改变l");
+					state = false;
+				}
+				
+				if(this.isOn){
+					return;
+				}
+				
+				this.isOn  = true;
+				list.addEventListener('click',function(){
+					console.log(state);
+				})
+			})
+		</script>
+	</body>
+</html>

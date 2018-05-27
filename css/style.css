@@ -1,0 +1,111 @@
+html,body{
+	height: 100%;
+}
+
+#box{
+	height: 680px;
+	width: 356px;
+	background: #e7e5ef;
+	border-radius: 20px;
+	margin:0 auto;
+	position: relative;
+	box-shadow: 10px 10px 10px #8c89b6;
+	overflow: hidden;
+}
+
+.box_center{
+	width: 322px;
+	height: 562px;
+	margin:45px auto;
+	background: url(../images/box_center.png) no-repeat;
+}
+
+.box_center #messagebady{
+	height: 500px;
+	overflow: auto;
+	padding-top: 3px;
+}
+
+.box_center #messagebady div{
+	margin-top: 20px;
+}
+.right,.left{
+	width: 290px;
+}
+
+.right,.left,.right img,.right span,.left img, .left span{
+	float: left;
+	margin-left: 10px;
+}
+
+.right img,.right span{
+	float: right;
+}
+
+#messagebady span{
+	max-width: 207px;
+	line-height: 24px;
+	font-size: 14px;
+	padding: 7px 10px 5px 13px;
+	border-radius: 3px;
+	background: #fff;
+}
+
+.box_center .send{
+	text-align: center;
+	height: 50px;
+	background:rgba(0,0,0,0.4);
+	padding-top:10px;
+}
+
+.box_center .send #img{
+	height: 40px;
+	width: 35px;
+	float: left;
+	margin:0 15px;
+	
+}
+
+.box_center .send  #message{
+	height: 40px;
+	width: 160px;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+	padding: 0 15px;
+	line-height: 40px;
+	float: left;
+	border-radius: 2px;
+}
+
+.box_center .send #submit{
+	width: 64px;
+	text-align: center;
+	color:#e15671;
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	
+}
+
+.line{
+	width: 60px;
+	height: 6px;
+	background: #a3a1a7;
+	border-radius: 2px;
+	position: absolute;
+	top:22px;
+	left: 50%;
+	margin-left: -30px;
+}
+
+.logo{
+	height: 40px;
+	width: 50px;
+	background: url(../images/miaov.png) no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 15px;
+}

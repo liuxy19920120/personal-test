@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				height: 100px;
+				width: 100px;
+				background: red;
+				position: absolute;
+				left: 40px;
+				top:40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			let obj = {
+				a:1,
+				list:[
+					{
+						b:2,
+						c:3
+					},
+					{
+						d:5,
+						e:6
+					}
+				]
+			}
+			
+			// 深拷贝
+			function deepClone(obj){
+				let newObj = obj instanceof Array?[]:{};
+				for(var attr in obj){
+					if(typeof obj[attr] === 'object' && obj[attr] !=null){
+						newObj[attr] = deepClone(obj[attr])
+					}else{
+					  newObj[attr] = obj[attr]						
+					}
+
+				}
+				
+				return newObj
+			}
+			
+			console.log(deepClone(obj))
+			
+			document.onclick = function(){
+				shake(box,'left',30)
+			}
+			
+			function shake(obj,attr,fudu){
+				if(obj.timer){
+					return
+				}
+				let arr = [];
+				for(var i=fudu;i>=0;i-=5){
+					arr.push(i,-i)
+				}
+				
+				arr.push(0)
+				let l = obj.getBoundingClientRect()[attr]
+				let n = 0;
+				obj.timer = setInterval(function(){
+					n++;
+					obj.style[attr] = l+ arr[n]+'px';
+					if(n >= arr.length-1){
+						clearInterval(obj.timer)
+						obj.timer = null;
+					}
+				},100)
+			}
+		</script>
+	</body>
+</html>

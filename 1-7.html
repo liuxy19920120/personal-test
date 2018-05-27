@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload =function(){
+				var list = document.getElementById('list');
+				var listClass = document.getElementsByClassName('list');
+				var arrLi = document.getElementsByTagName('li');
+				var arrList  =document.querySelectorAll('.list li');
+				var onlyLi  =document.querySelector('li');
+				onlyLi.style.color ='red';
+				console.log(list);
+				console.log(listClass);
+				console.log(arrLi);
+				console.log(arrList);
+				console.log(onlyLi);
+			};
+		</script>
+	</head>
+	<body>
+		<ul id='list' class="list">
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="box">
+			<div class="line"></div>
+			<div class="box_center">
+				<div id="messagebady">
+					<!--<div class="right clearfix">
+						<img src="images/lico.png"/>
+						<span>
+							说：哈？好呀，多少钱我都愿意～
+				～呵呵<em></em>
+						</span>
+					</div>
+					<div class="left clearfix">
+						<img src="images/rico.png"/>
+						<span>
+							说：哈？好呀，多少钱我都愿意～
+				～呵呵<em></em>
+						</span>
+					</div>-->
+				</div>
+				<div class="send">
+					<img src="images/rico.png" id="img"/>
+					<input type="text" name="message" id="message" value="" placeholder="请输入"/>
+					<input type="submit" name="submit" id="submit" value="发送" />
+				</div>
+			</div>
+			<div class="logo"></div>
+		</div>
+		<script>
+			var img = document.getElementById('img');
+			var changeStatus = true;
+			var imgsrc = 'rico';
+			img.onclick = function(){
+				if(changeStatus){
+					changeStatus = false;
+					imgsrc = 'lico';
+				}else{
+					changeStatus = true;
+					imgsrc = 'rico';
+				}
+				
+				img.src = 'images/' + imgsrc+ '.png';
+			};
+			
+			var message = document.getElementById('message');
+			var btn = document.getElementById('submit');
+			var messagebady = document.getElementById('messagebady');
+			var className = 'left';
+			btn.onclick = function(){
+				var value = message.value;
+				if(value ==''){
+					alert('输入内容');
+				}else{
+					if(changeStatus){
+						className = 'left';						
+					}else{
+						className = 'right';		
+					}
+					
+					messagebady.innerHTML = '<div class="'+ className+' clearfix">'+
+							'<img src="images/'+imgsrc+'.png"/>'+
+							'<span>' +
+							value +
+							'</span>'+
+						'</div>' + messagebady.innerHTML;
+						
+					
+				}				
+			};
+		</script>
+	</body>
+</html>

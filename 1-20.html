@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				position: absolute;
+				left: 10px;
+				top:10px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+//			var timer = null;
+//			var n = 0;
+//			timer = setInterval(fn,1000,10);
+//			function fn(num){
+//				n +=num;
+//				console.log(n);
+//			}
+
+			var box = document.getElementById('box');
+			var timer = null;
+			document.onclick = function(){
+				timer = setInterval(fn,10);
+			}
+			
+			function fn(){
+				box.style.left = box.offsetLeft + 1 +'px';
+			}
+		</script>
+	</body>
+</html>
